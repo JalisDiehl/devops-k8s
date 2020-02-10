@@ -16,7 +16,7 @@ Step for CI/CD
 
 `6 - gcloud compute instances list`
 
-`7 - kubectl create deployment devops-web --image=gcr.io/teste-250119/devops-k8s:v1`
+`7 - kubectl create deployment devops-web --image=gcloud container images list`
 
 `8 - kubectl get pods`
 
@@ -27,3 +27,9 @@ Step for CI/CD
 `11 - kubectl autoscale deployment devops-web --cpu-percent=50 --min=1 --max=3`
 
 `12 - kubectl get hpa`
+
+## For testing app 
+
+`kubectl run -i --tty load-generator --image=busybox /bin/sh`
+
+`while true; do wget -q -O- http://yout-ip-address; done`
